@@ -29,6 +29,7 @@ body {
     background: rgba(2, 11, 22, 0.75);
     backdrop-filter: blur(10px);
     z-index: 1000;
+    transition: background 0.4s ease;
 }
 
 .logo {
@@ -69,6 +70,7 @@ body {
         radial-gradient(circle at 20% 80%, rgba(180, 0, 255, 0.12), transparent 30%),
         #020b16;
     overflow: hidden;
+    transition: background 0.4s ease;
 }
 
 .home-content {
@@ -204,6 +206,7 @@ body {
     padding: 100px 10%;
     text-align: center;
     background: #030e1a;
+    transition: background 0.4s ease;
 }
 
 .section h2 {
@@ -302,9 +305,105 @@ footer {
     text-align: center;
     background: #01070d;
     color: #aaa;
+    transition: background 0.4s ease;
 }
 
-/* ================= ANIMATIONS ================= */
+/* ================= LIGHT MODE STYLES ================= */
+body.light-mode {
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+body.light-mode .header {
+    background: rgba(238, 242, 246, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .logo,
+body.light-mode .navbar a,
+body.light-mode #menu-icon,
+body.light-mode #darkMode-icon {
+    color: #0f172a;
+}
+
+body.light-mode .logo span {
+    color: #0077b6;
+}
+
+body.light-mode .navbar a:hover,
+body.light-mode .navbar a.active {
+    color: #0077b6;
+    text-shadow: none;
+}
+
+body.light-mode .home {
+    background: 
+        radial-gradient(circle at 80% 40%, rgba(0, 180, 216, 0.12), transparent 45%),
+        radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.12), transparent 45%),
+        #eef2f6;
+}
+
+body.light-mode .home-content h1 {
+    color: #0077b6;
+    text-shadow: none;
+}
+
+body.light-mode .home-content h1 span {
+    color: #0f172a;
+}
+
+body.light-mode .home-content p {
+    color: #475569;
+}
+
+body.light-mode .section {
+    background: #e2e8f0;
+}
+
+body.light-mode .section p {
+    color: #475569;
+}
+
+body.light-mode .skill {
+    border-color: #0077b6;
+    color: #0077b6;
+    background: #ffffff;
+}
+
+body.light-mode .skill:hover {
+    background: #0077b6;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+}
+
+body.light-mode .project-card {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .project-card:hover {
+    border-color: #0077b6;
+    box-shadow: 0 8px 24px rgba(0, 119, 182, 0.15);
+}
+
+body.light-mode .project-card h3 {
+    color: #0077b6;
+}
+
+body.light-mode .project-card p {
+    color: #64748b;
+}
+
+body.light-mode .profile-ring img {
+    border-color: #ffffff;
+}
+
+body.light-mode footer {
+    background: #cbd5e1;
+    color: #334155;
+}
+
 @keyframes glow {
     0%, 100% {
         box-shadow: 0 0 20px #0ef, 0 0 50px rgba(0, 238, 255, 0.5);
