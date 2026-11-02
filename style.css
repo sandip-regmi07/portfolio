@@ -424,25 +424,56 @@ body.light-mode footer {
 }
 
 @media (max-width: 900px) {
-    .navbar a {
-        margin-left: 15px;
-        font-size: 14px;
+    .header {
+        padding: 18px 5%;
     }
+
+    /* Mobile Navbar Dropdown Styling */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 15px 7%;
+        background: rgba(2, 11, 22, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 238, 255, 0.2);
+        flex-direction: column;
+        display: none; /* Mobile ma suruma lukxa */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar.active {
+        display: flex; /* Menu icon thichepaxi dekhauxa */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 17px;
+        margin: 12px 0;
+        margin-left: 0;
+        text-align: center;
+    }
+
     .home {
         flex-direction: column;
         text-align: center;
         padding-top: 130px;
     }
+    
     .home-content h1 {
         font-size: 45px;
     }
+    
     .profile-container {
         margin-top: 50px;
     }
+    
     .profile-ring {
         width: 300px;
         height: 300px;
     }
+    
     .buttons,
     .home-sci {
         justify-content: center;
